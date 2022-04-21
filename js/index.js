@@ -1,4 +1,4 @@
-// PROMEDIO NOTAS
+// PROMEDIO NOTAS ESTUDIANTES
 
 
 let nombreSolicitado = '';

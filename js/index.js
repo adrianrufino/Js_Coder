@@ -82,11 +82,10 @@ let nota2 = prompt("Ingrese la segunda Nota");
 let nota3 = prompt("Ingrese la tercera Nota");
 let nota4 = prompt("Ingrese la cuarta Nota");
 let nota5 = prompt("Ingrese la quinta Nota");
-let salida = prompt("Para salir, por favor escriba ESC respetando las mayusculas");
 
 
-for(i=0; i<=4; i++){
-let sumaNota = (parseInt(nota1) + parseInt(nota2) + parseInt(nota3) + parseInt(nota4) + parseInt(nota5));
+for(i=0; i<=5; i++){
+let sumaNota = (parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3) + parseFloat(nota4) + parseFloat(nota5));
 let promedioNota = (sumaNota/5);
 alert(nombreSolicitado + "su promedio es"+" "+ promedioNota);
 
@@ -98,7 +97,8 @@ function salir(){
     alert("Por favor ingresar un comando valido")
     salida = prompt("Ingresar ESC para poder salir")
     
-}
+    }
+
 }
 
 solicitarNombre();

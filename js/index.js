@@ -20,7 +20,7 @@ class Cita {
 
 let persona;
 
-//HICE EL FOR PARA COMPLETAR MI VECTOR/ARRAY DE CITAS
+//HICE EL FOR PARA COMPLETAR MI VECTOR/ARRAY DE CITAS.
 
 for (let i=0; i<= 2; i++){
     altaPersona();

@@ -1,30 +1,58 @@
-// PROMEDIO NOTAS ESTUDIANTES
+let arrayCitas = [];
 
+//DEFINICION DE CLASES
 
-let nombreSolicitado = '';
-let nota1, nota2, nota3, nota4, nota5 = 0;
-
-solicitarDatos();
-
-promedio(nota1, nota2, nota3, nota4, nota5);
-
-function solicitarDatos() {
-    nombreSolicitado = prompt("Ingrese su Nombre y Apellido");
-    nota1 = prompt("Ingrese la primera Nota");
-    nota2 = prompt("Ingrese la segunda Nota");
-    nota3 = prompt("Ingrese la tercera Nota");
-    nota4 = prompt("Ingrese la cuarta Nota");
-    nota5 = prompt("Ingrese la quinta Nota");
+class Persona {
+    constructor(nombre,apellido,telefono){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+    }
 }
 
-function promedio(n1, n2, n3, n4, n5) {
-
-    let promedioNota = 0.0;
-
-    for (i = 0; i <= 4; i++) {
-        let sumaNota = (parseInt(n1) + parseInt(n2) + parseInt(n3) + parseInt(n4) + parseInt(n5));
-        promedioNota = (sumaNota / 5);
+class Cita {
+    constructor(fecha,hora,persona){
+        this.fecha = fecha;
+        this.hora = hora;
+        this.persona = persona;
     }
+}
 
-    alert(nombreSolicitado + ", su promedio es " + promedioNota +"." + " " + "Muchas gracias por su consulta");
+let persona;
+
+//HICE EL FOR PARA COMPLETAR MI VECTOR/ARRAY DE CITAS
+
+for (let i=0; i<= 2; i++){
+    altaPersona();
+    altaCita();
+}
+console.log(arrayCitas)
+
+
+//DEFINICION DE FUNCIONES
+
+function altaPersona() {
+    let nombre = prompt("Ingrese su nombre");
+    let apellido = prompt("Ingrese su apellido");
+    let telefono = prompt("Ingrese su telefono de Contacto");
+    persona = new Persona(nombre,apellido,telefono);
+    
+}
+
+
+
+function altaCita() {
+    let fecha = prompt("Ingrese la fecha");
+    let hora = prompt("Ingrese la Hora");
+    let cita = new Cita(fecha,hora,persona);
+    arrayCitas.push(cita);
+}
+
+
+function buscarFecha(fecha){
+    return arrayCitas.find(a =>a.fecha == fecha);
+}
+
+function buscarApellido(apellido){
+    return arrayCitas.find(a =>a.apellido == apellido);
 }
